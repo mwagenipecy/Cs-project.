@@ -28,7 +28,7 @@ class Customers extends DataTableComponent
                 ->sortable(),
             Column::make("Customer phone", "customer_email")
                 ->sortable(),
-            Column::make("User id", "id")
+            Column::make("User id", "User_id")
                 ->sortable(),
             Column::make("Created at", "created_at")
                 ->sortable(),

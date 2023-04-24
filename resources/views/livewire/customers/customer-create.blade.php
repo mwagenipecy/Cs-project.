@@ -4,17 +4,18 @@
         </h2>
     </x-slot>
 
+    @livewireStyles
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class=" w-full">
 
-                    <form method=" " action=" ">
-                        @csrf
+                    <form action="{{route('registerCustomer')}}" method="post">@csrf
+
                         <div class="mb-4">
                             <x-label for="customer_name" value="{{ __('Customer Name') }}" />
-                            <x-input id="customer_name" class="block mt-1 w-full" type="text" name="customer_name" :value="old('customer_name')" required autofocus autocomplete="customer_name" />
+                            <x-input id="customer_name" class="block mt-1 w-full" type="text" wire:model.defer="customer_name" name="customer_name" :value="old('customer_name')" required autofocus autocomplete="customer_name" />
                         </div>
                         <div class="mb-4">
                             <x-label for="email" value="{{ __('Customer Email') }}" />
@@ -37,4 +38,7 @@
             </div>
 
         </div>
+
+        @livewireScripts
+
     </div>

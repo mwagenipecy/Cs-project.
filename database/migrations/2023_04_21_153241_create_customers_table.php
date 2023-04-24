@@ -17,7 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('customer_name');
             $table->string('customer_email');
+            $table->string('customer_phone');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
         });
     }
 

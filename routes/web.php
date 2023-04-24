@@ -42,7 +42,8 @@ Route::middleware('auth')->group(function () {
 
      // to the includes debug
      Route::get('addCustomers',App\Http\Livewire\Customers\CustomerCreate::class)->name('addCustomers');
-
+     // register new customers
+    Route::post('/register/customers',[\App\Http\Livewire\Customers\CustomerCreate::class,'registerCustomer'])->name('registerCustomer');
 
 
 
