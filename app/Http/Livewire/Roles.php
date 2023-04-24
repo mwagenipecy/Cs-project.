@@ -61,4 +61,5 @@ class Roles extends Component
          dd(__LINE__);
         return view('livewire.permissions');
     }
+
 }

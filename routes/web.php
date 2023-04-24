@@ -40,6 +40,8 @@ Route::middleware('auth')->group(function () {
      Route::post('registerRole',[\App\Http\Livewire\Roles::class,'registerRole'])->name('admin/register/role');
 
 
+     // to the includes debug
+     Route::get('addCustomers',App\Http\Livewire\Customers\CustomerCreate::class)->name('addCustomers');
 
 
 

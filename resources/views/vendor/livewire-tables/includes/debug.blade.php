@@ -1,5 +1,6 @@
 <div class="">
-    <x-primary-button class="mt-6 mb-6 ml-6 p-4" wire:ckick="createCustomer"> Create</x-primary-button>
+    <a href="{{route('addCustomers')}}">
+    <x-primary-button class="mt-6 mb-6 ml-6 p-4" wire:ckick="createCustomer"> Create</x-primary-button></a>
     @if ($component->debugIsEnabled())
         @php
             $debuggable = [
